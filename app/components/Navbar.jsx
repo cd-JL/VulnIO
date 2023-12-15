@@ -31,45 +31,8 @@ const Navbar = () => {
 
   // JSX rendering for the Navbar component
   return (
-    <nav className="flex bg-gray-800 p-4 text-white flex-row justify-between">
-      {/* Navigation links for movies and edit movies, visible when authenticated */}
-      <ul className="flex space-x-4">
-        <li>
-          {status === 'authenticated' && (
-            <div>
-              <Link href="/protected/movies" className="ml-3">Movies</Link>
-            </div>
-          )}
-        </li>
-        <li>
-          {status === 'authenticated' && (
-            <div>
-              <Link href="/admin/edit" className="ml-3">Edit Movies</Link>
-            </div>
-          )}
-        </li>
-      </ul>
-      {/* Authentication and user-related links */}
-      <ul className="flex space-x-4">
-        <li>
-          {/* Display loading message while session status is being determined */}
-          {status === 'loading' && <div>Loading ...</div>}
-          {/* Display login link when unauthenticated */}
-          {status === 'unauthenticated' && <Link href="/api/auth/signin">Login</Link>}
-          {/* Display user email when authenticated */}
-          {status === "authenticated" && <div>{session.user.email}</div>}
-        </li>
-        <li>
-          {/* Display register link when unauthenticated */}
-          {status === 'unauthenticated' && <Link href="/register">Register</Link>}
-          {/* Display logout link when authenticated */}
-          {status === 'authenticated' && (
-            <div>
-              <Link href="/api/auth/signout" className="ml-3">Logout</Link>
-            </div>
-          )}
-        </li>
-      </ul>
+    <nav className="flex bg-gray-800 p-10 text-white flex-row justify-between">
+      <h1 className=" text-2xl font-bold">VulnIO</h1>
     </nav>
   );
 };

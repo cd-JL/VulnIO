@@ -41,9 +41,9 @@ export default function Home() {
 
 
   return (
-    <main className="flex min-h-screen items-center justify-center p-24">
-      <div className="mr-8 border border-gray-800 rounded">
-        <h2 className='font-bold'>System Information</h2>
+    <main className="flex min-h-screen items-center justify-center p-10">
+      <div className="mr-8 border border-gray-800 rounded-xl p-5 bg-slate-300 shadow-lg">
+        <h2 className='font-bold text-xl mb-5'>System Information</h2>
         <p>OS Name: {osName}</p>
         <p>OS Version: {osVersion}</p>
         <p>Browser Name: {browserName}</p>
@@ -51,8 +51,8 @@ export default function Home() {
         <p>Engine Name: {engineName}</p>
         <p>Engine Version: {engineVersion}</p>
       </div>
-      <div className='ml-20 w-2/3 border border-gray-800 rounded'>
-        <h2 className='font-bold'>Vulnerabilities</h2>
+      <div className='ml-20 w-2/3 border border-gray-800 rounded-xl p-5 bg-slate-300 shadow-lg'>
+        <h2 className='font-bold text-xl mb-5'>Vulnerabilities</h2>
         <ul>
           {data && data.vulnerabilities && data.vulnerabilities.length > 0 ? (
             data.vulnerabilities.map((vulnerability, index) => (
