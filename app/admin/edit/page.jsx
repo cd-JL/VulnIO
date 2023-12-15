@@ -1,9 +1,10 @@
 import React from 'react'
-import EditMovieList from '@/app/components/EditMovieList'
+// import EditMovieList from '@/app/components/EditMovieList'
 
 const page = () => {
   return (
-    <EditMovieList />
+    // <EditMovieList />
+    <p>Text</p>
   )
 }
 
